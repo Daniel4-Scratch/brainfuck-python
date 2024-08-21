@@ -18,12 +18,12 @@ def execute(string):
             tape[pointer] -= 1
         elif command == ">":
             pointer += 1
-            if pointer >= 30000:
+            if pointer >= 30001:
                 pointer = 0
         elif command == "<":
             pointer -= 1
             if pointer < 0:
-                pointer = 29999
+                pointer = 30000
         elif command == "[":
             if tape[pointer] == 0:
                 loop_start = i
